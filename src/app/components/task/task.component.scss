@@ -1,0 +1,132 @@
+// Sin tareas
+.container-noTask {
+    width: 100%;
+    height: 100%;
+}
+
+.img-noTask {
+    width: 220px;
+    height: 220px;
+}
+
+.t-noTask {
+    color: rgb(48, 48, 48);
+    font-size: 23px;
+}
+
+.chip-add {
+    background-color: #22C55E !important;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+}
+
+.m-r {
+    margin: 0 8px 0 0;
+}
+
+// 
+.cont-columns-g {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.title-column {
+    margin: 10px 0 0 0;
+    text-align: start;
+    font-size: 20px;
+    color: #575757;
+    font-weight: 500;
+}
+
+.cont-card {
+    background-color: var(--cardColor);
+    border-radius: 15px;
+    height: auto;
+    width: 80%;
+    padding: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-title {
+    border-radius: 15px;
+    margin: 0;
+    padding: 8px;
+    background-color: #ecf2ff;
+    color: #0e5eff;
+    font-size: 13px;
+    font-weight: 500;
+    width: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-content {
+    overflow: auto;
+    height: 78%;
+}
+
+.p-content {
+    margin: 10px 0 0 0;
+    font-size: 13px;
+    color: #6f6c76;
+    letter-spacing: 1px;
+}
+
+// Tareas
+.cont-g-task {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+// progress
+.p-title.progress {
+    background-color: #ffefe1;
+    color: #ef7f17;
+}
+
+.p-title.done {
+    background-color: #c7fbaf;
+    color: #03C988;
+}
+// add
+.card-add{
+    // border: 1px dotted rgb(83, 83, 83);
+     width: 88%; height: auto; display: flex; justify-content: center; align-items: center;
+    margin-top: 16px; border-radius: 16px; flex-direction: column;
+    padding: 10px 0 10px;
+    cursor: pointer;
+    background-color: var(--cardColor);
+}
+
+.icon-add{
+    font-size: 1.8rem; width: auto;height: auto; 
+}
+.txt-add{
+    font-size: 15px; margin: 3px 0 0 0; color: var(--txtBlack);
+}
+
+.card-add:hover{
+    .icon-add{
+        color: #03C988;
+    }
+    .txt-add{
+        color: #03C988;;
+    }
+}

@@ -1,0 +1,57 @@
+// Import font
+// @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+
+:root {
+    --backColor: #f7f9fb;
+    --cardColor: #ffffff;
+    --txtBlack: #010101;
+    --txtSecondary: #BAC1B8
+}
+
+.flex-row{
+ display: flex;
+ flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(199, 199, 199) rgba(255, 166, 0, 0);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(223, 223, 223);
+    border-radius: 20px;
+    border: 3px solid rgba(255, 166, 0, 0);
+  }
+
+
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 20px !important;
+}

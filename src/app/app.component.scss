@@ -1,0 +1,25 @@
+.container-global{
+    height: 100%; width: 100%; background-color: var(--backColor);
+}
+
+.container-header{
+    height: 20%; width: 85%;
+}
+
+.img-avatar{
+    width: 90px; height: 90px;
+}
+
+.txt-init{
+    margin: 0 20px 0 20px; font-size: 35px; text-align: center; color: var(--txtBlack);
+}
+
+// 
+.w-welcome{
+    width: 30%;
+}
+
+.w-indicators{
+    width: 70%;
+}
+

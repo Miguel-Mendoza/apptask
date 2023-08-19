@@ -1,0 +1,32 @@
+.indicator-container{
+    background-color: var(--cardColor); width: 130px; height: 60px;
+    border-radius: 5px 8px 8px 5px;
+    padding: 5px;
+
+}
+.cont-indi{
+  width: 100%;  justify-content: space-evenly;
+}
+.c1 {
+    border-left: 10px solid #426AC6;
+    
+  }
+
+  .c2 {
+    border-left: 10px solid #FF822C;
+    
+  }
+
+  .c3 {
+    border-left: 10px solid #22C55E;
+   
+  }
+  .c-w{
+    width: 90%; height: auto;
+  }
+  .c-title{
+    margin: 0; padding: 0; font-size: 16px; color: var(--txtSecondary);
+  }
+  .c-indi{
+    margin: 0; padding: 0; font-size: 24px; color: var(--txtBlack);
+  }

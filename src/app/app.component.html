@@ -1,0 +1,30 @@
+<ngx-spinner 
+  bdColor = "rgba(0, 0, 0, 0.8)" 
+  size = "large" 
+  color = "#fff" 
+  type = "ball-scale-multiple" 
+  [fullScreen] = "true">
+    <p style="color: white; font-size: 25px;" > Espere un momento... </p>
+  </ngx-spinner>
+  <!-- <ngx-spinner type="ball-scale-multiple"></ngx-spinner> -->
+
+<div class="flex-column center container-global">
+  
+  <div class="flex-row center container-header">
+    <!-- Welcome -->
+    <div class="flex-row center w-welcome">
+      <img src="../assets/img/avatar.svg" class="img-avatar">
+      <p class="txt-init">
+        Bienvenido <br> <strong>Carlos</strong>
+      </p>
+    </div>
+    <!-- Indicators -->
+    <app-indicators class="w-indicators"></app-indicators>
+    
+  </div>
+
+
+  <app-task style="height: 70%; width: 85%;"></app-task>
+
+
+</div>

@@ -1,0 +1,111 @@
+<ng-container *ngIf="allTaks.length === 0 ; else elseTemplate">
+    <div class="flex-column center container-noTask">
+        <img src="../../../assets/img/userTask.png" class="img-noTask">
+        <p class="t-noTask">
+            Crea tu primer tarea
+        </p>
+          <mat-chip (click)="add('create')" class="chip-add">
+            <div class="flex-row center">
+                <mat-icon class="m-r">add_task</mat-icon>
+                Agregar tarea
+            </div>
+        </mat-chip>
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+
+    <div class="cont-g-task">
+        <!-- Creadas -->
+        <div class="cont-columns-g">
+            <p class="title-column">Creadas</p>
+            <!-- agregar -->
+            <div class="card-add" (click)="add('create')">
+                <mat-icon class="icon-add">add_task</mat-icon>
+                <p class="txt-add">Agregar nueva tarea</p>
+            </div>
+            
+            <div class="cont-card" *ngFor="let task of create">
+                <div class="card-title">
+                    <p class="p-title">{{task.title}}</p>
+                    <button mat-icon-button  [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="deleteTask(task)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Eliminar</span>
+                        </button>
+                        <button mat-menu-item (click)="editTask(task)">
+                            <mat-icon>edit</mat-icon>
+                            <span>Editar</span>
+                          </button>
+                        <button mat-menu-item (click)="updateState(task)">
+                          <mat-icon>sync_alt</mat-icon>
+                          <span>En progreso</span>
+                        </button>
+                      </mat-menu>
+                </div>
+                <div class="card-content">
+                    <p class="p-content">{{task.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- En progreso -->
+        <div class="cont-columns-g">
+            <p class="title-column">En progreso</p>
+            <div class="cont-card" *ngFor="let task of progress">
+                <div class="card-title">
+                    <p class="p-title progress">{{task.title}}</p>
+                    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="deleteTask(task)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Eliminar</span>
+                        </button>
+                        <button mat-menu-item (click)="editTask(task)">
+                            <mat-icon>edit</mat-icon>
+                            <span>Editar</span>
+                          </button>
+                        <button mat-menu-item (click)="updateDone(task)">
+                          <mat-icon>sync_alt</mat-icon>
+                          <span>Finalizar</span>
+                        </button>
+                      </mat-menu>
+                </div>
+                <div class="card-content">
+                    <p class="p-content">{{task.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finalizado -->
+        <div class="cont-columns-g">
+            <p class="title-column">Finalizada</p>
+            <div class="cont-card" *ngFor="let task of done">
+                <div class="card-title">
+                    <p class="p-title done">{{task.title}}</p>
+                    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="deleteTask(task)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Eliminar</span>
+                        </button>
+                        <button mat-menu-item (click)="editTask(task)">
+                            <mat-icon>edit</mat-icon>
+                            <span>Editar</span>
+                          </button>
+                        <button mat-menu-item (click)="updateProgress(task)">
+                          <mat-icon>sync_alt</mat-icon>
+                          <span>En progreso</span>
+                        </button>
+                      </mat-menu>
+                </div>
+                <div class="card-content">
+                    <p class="p-content">{{task.description}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</ng-template>
+

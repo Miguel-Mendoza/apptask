@@ -1,0 +1,37 @@
+<div class="container-dialog">
+
+    <div class="container-title">
+        <p class="dialog-title">Agregar tarea</p>
+
+        <button mat-icon-button (click)="close()">
+            <mat-icon>close</mat-icon>
+          </button>
+    </div>
+
+    <form class="container-form" [formGroup]="task">
+        
+        <mat-form-field appearance="outline" class="w-input">
+          <mat-label>Título</mat-label>
+          <input matInput placeholder="Título de la tarea" formControlName="title">
+          <mat-icon matSuffix>stylus</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-input">
+          <mat-label>Descripción</mat-label>
+          <input matInput placeholder="Descripción de la tarea" formControlName="description">
+          <mat-icon matSuffix>stylus_note</mat-icon>
+        </mat-form-field>
+      
+    
+      </form>
+
+      <div class="container-btn">
+       
+        <button mat-raised-button class="btn-add" [disabled]="!task.valid" (click)="saveTaks()" *ngIf="data === 'create' ">
+          Crear tarea
+        </button>
+        <button mat-raised-button class="btn-add" [disabled]="!task.valid" (click)="updateTaks()" *ngIf="data.status === 'update' ">
+          Actualizar
+        </button>
+      </div>
+</div>
